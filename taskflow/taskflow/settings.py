@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = "$preciouse@988"
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
@@ -24,6 +24,7 @@ INSTALLED_APPS = [
 
 
 SWAGGER_SETTINGS = {
+    "USE_SESSION_AUTH": False,
     "SECURITY_DEFINITIONS": {
         "Bearer": {
             "type": "apiKey",
@@ -31,8 +32,9 @@ SWAGGER_SETTINGS = {
             "in": "header",
             "description": "Enter: Bearer <your JWT token>",
         }
-    }
+    },
 }
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -100,3 +102,4 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),
 }
+SWAGGER_SETTINGS = {"USE_SESSION_AUTH": False}
