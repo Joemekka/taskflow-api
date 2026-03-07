@@ -7,7 +7,7 @@ SECRET_KEY = "$preciouse@988"
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -103,3 +103,5 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(hours=1),
 }
 SWAGGER_SETTINGS = {"USE_SESSION_AUTH": False}
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
