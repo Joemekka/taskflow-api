@@ -1,4 +1,4 @@
-# TaskFlow API V1
+# TaskFlow API
 
 TaskFlow is a Django REST API that allows users to manage tasks.
 
