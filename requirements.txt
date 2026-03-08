@@ -1,0 +1,36 @@
+
+# Core Django
+Django==5.0.6
+
+# Django REST Framework
+djangorestframework==3.15.2
+
+# JWT authentication
+djangorestframework-simplejwt==5.3.1
+
+# PostgreSQL driver
+psycopg2-binary==2.9.11
+
+# Environment variables support
+python-decouple==3.8
+
+# Timezone support
+pytz==2026.1.post1
+
+# YAML support (if you use YAML config files)
+PyYAML==6.0.1
+
+# For string inflection (if used in your project)
+inflection==0.5.1
+
+# SQL formatting (used by Django internally)
+sqlparse==0.4.4
+
+# HTTP URI templates (used by DRF internally)
+uritemplate==4.1.1
+
+# Gunicorn for deployment
+gunicorn==21.2.0
+
+# Swagger/OpenAPI documentation (drf_yasg alternative)
+drf-spectacular==0.26.3
