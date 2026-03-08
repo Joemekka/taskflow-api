@@ -1,9 +1,10 @@
 from pathlib import Path
 from datetime import timedelta
+from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "$preciouse@988"
+SECRET_KEY = config("SECRET_KEY")
 
 DEBUG = False
 
@@ -64,7 +65,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "taskflow.wsgi.application"
+WSGI_APPLICATION = "taskflow.taskflow.wsgi.application"
 
 DATABASES = {
     "default": {
