@@ -1,15 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import redirect
+from django.views.generic.base import RedirectView
 from rest_framework_simplejwt.views import TokenObtainPairView
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 
-def home(request):
-    return redirect("/api/docs/")
-
-
 urlpatterns = [
+    path("", RedirectView.as_view(url="/api/docs/", permanent=False)),
     path("admin/", admin.site.urls),
     path("api/login/", TokenObtainPairView.as_view(), name="login"),
     path("api/", include("tasks.urls")),
